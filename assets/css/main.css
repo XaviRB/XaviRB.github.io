@@ -109,7 +109,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
+		color: rgba(255, 255, 255, 0.66);
 		font-family: courier, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -168,6 +168,22 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	p.span{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		border-radius: 0.25em;
+		border: solid 1px rgba(255, 255, 255, 0.15);
+		background: rgba(255, 255, 255, 0.055);
+		margin: 0 0 2em 0;
+		padding-inline: 1em 1em;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-weight: bold;
@@ -178,6 +194,19 @@ input, select, textarea {
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 			text-decoration: none;
+		}
+
+		h2 span{
+			color:rgb(0, 255, 65);
+			text-shadow: 
+				0 1px 0 rgb(204, 204, 204),
+               0 2px 0 #b1aeae,
+               0 6px 1px rgba(193, 191, 191, 0.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3);
+			position:relative;
+			bottom: 2.5px;
+               
 		}
 
 	h1 {
@@ -1832,7 +1861,7 @@ input, select, textarea {
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.6em;
+		font-size: 13.5px;
 		font-weight: bold;
 		height: calc(4.75em + 2px);
 		letter-spacing: 0.25em;
@@ -1908,8 +1937,10 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ffffff;
-			color: #312450 !important;
+				background-color: #ffffff;
+				color: #000000 !important;
+				color:rgba(0, 255, 64, 0.701);
+				text-shadow: 1px 3px 1px #47474737;
 		}
 
 			input[type="submit"].primary:after,
@@ -1939,7 +1970,14 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgba(255, 255, 255, 0.55) !important;
+			box-shadow: 0 0 7px rgba(215, 215, 215, 0.867),
+				0 0 5px rgba(255, 255, 255, 0.696),
+				0 0 10px rgba(255, 255, 255, 0.604),
+				0 0 13px rgba(0, 255, 170, 0.793),
+				0 0 15px rgba(0, 255, 170, 0.46),
+				0 0 20px rgba(0, 255, 170, 0.485),
+				0 0 25px rgba(0, 255, 170, 0.454),
+				0 0 32px rgba(0, 255, 170, 0.571);;
 		}
 
 			input[type="submit"]:hover:after,
@@ -2607,24 +2645,31 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		/* DEMO-SPECIFIC STYLES */
 	.typewriter h1 {
-		color: #39FF14;
+		color:rgba(0, 255, 64, 0.701);
+			text-shadow: 
+				0 1px 0 rgb(204, 204, 204),
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1);
 		font-family: courier;
 		overflow: hidden; /* Ensures the content is not revealed until the animation */
 		border-right: .15em solid #39FF14; /* The typwriter cursor */
 		white-space: nowrap; /* Keeps the content on a single line */
 		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		display: flex;
+		width: 100%;
 		letter-spacing: .15em; /* Adjust as needed */
 		animation: 
-		typing 3s steps(30, end),
-		blink-caret .5s step-end infinite;
+			typing 3s steps(27, end),
+			blink-caret .5s step-end infinite;
 	}
 	
 	/* The typing effect */
 	@keyframes typing {
 		from { width: 0 }
-		to { width: 80% }
+		to { width: 100% }
 	}
 	
 	/* The typewriter cursor effect */
@@ -2649,6 +2694,7 @@ input, select, textarea {
 		list-style: disc;
 		margin: 0 0 2em 0;
 		padding-left: 1em;
+		
 	}
 
 		ul li {
@@ -3279,6 +3325,16 @@ input, select, textarea {
 			background-color: #011F5B;
 		}
 
+		.wrapper.style4 {
+			padding: 2.5em 2.5em 0.5em 2.5em ;
+			background: #000000;
+			background-attachment: fixed;
+			background-image: url("images/intro.svg");
+			background-position: top right;
+		
+		background-size: 100% 100%;
+		}
+
 		.wrapper.style3-alt {
 			background-color: #009732;
 		}
@@ -3790,10 +3846,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #011F5B, #39FF14);
-				background-image: -webkit-linear-gradient(to right, #011F5B, #39FF14);
-				background-image: -ms-linear-gradient(to right, #011F5B, #39FF14);
-				background-image: linear-gradient(to right, #011F5B, #39FF14);
+				background-image: -moz-linear-gradient(to right, #011F5B, #ffffff);
+				background-image: -webkit-linear-gradient(to right, #011F5B, #ffffff);
+				background-image: -ms-linear-gradient(to right, #011F5B, #ffffff);
+				background-image: linear-gradient(to right, #011F5B, #ffffff);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
