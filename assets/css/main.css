@@ -109,7 +109,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.66);
+		color: rgba(255, 255, 255, 0.835);
 		font-family: courier, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -2744,9 +2744,40 @@ input, select, textarea {
 				}
 			}
 
-			@media screen and (max-width: 389px) {
+			@media screen and (max-width: 993px) {
 				.image.fit.x.bot img {
-					width: 80%;
+					width: 100%;
+					margin: 0 0 0 0em;
+					border-radius: 100%;
+					overflow: hidden;
+					box-shadow: 0 5px 15px 0px rgb(0, 217, 36);
+					transform: translatey(0px);
+					animation: float 3.5s ease-in-out infinite;
+				}
+
+				@keyframes float {
+					0% {
+						box-shadow: 2px 5px 15px 5px rgb(10, 255, 76);
+						transform: translatey(0px);
+					}
+					50% {
+						box-shadow: 0 25px 15px 0px rgba(0, 79, 4, 0.734);
+						transform: translatey(-20px);
+					}
+					100% {
+						box-shadow: 2px 5px 15px 5px rgb(10, 255, 76);
+						transform: translatey(0px);
+					}
+				}
+			}
+
+			@media screen and (max-width: 470px) {
+				.image.fit.x.bot {
+					width: 40%;
+				}
+
+				.image.fit.x.bot img {
+					width: 100%;
 					margin: 0 0 0 0em;
 					border-radius: 100%;
 					overflow: hidden;
@@ -2783,8 +2814,7 @@ input, select, textarea {
 
 	.typewriter h1 {
 		color:rgb(0, 255, 102);
-		text-shadow: 2.5px 2.5px 3px rgb(255, 255, 255), 0 0 25px rgba(0, 255, 72, 0.807), 0 0 15px rgba(40, 187, 60, 0.781);
-			
+		text-shadow: 2.5px 2.5px 3px rgb(255, 255, 255), 0 0 25px rgba(0, 255, 72, 0.807), 0 0 15px rgba(40, 187, 60, 0.381);
 		font-family: courier;
 		overflow: hidden; /* Ensures the content is not revealed until the animation */
 		border-right: .15em solid #37ff14c8; /* The typwriter cursor */
